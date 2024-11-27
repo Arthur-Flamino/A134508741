@@ -16,7 +16,7 @@ class ObjetoDB {
             fun abrirDB(context: Context): ObjetoDataB {
                 return Room.databaseBuilder(
                     context.applicationContext,
-                    ObjetoDataB::class.java,"Objeto.db"
+                    ObjetoDataB::class.java, "objeto.db"
                 ).build()
             }
         }
