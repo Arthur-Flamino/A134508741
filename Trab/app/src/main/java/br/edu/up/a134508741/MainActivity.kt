@@ -5,7 +5,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 
-import br.edu.up.a134508741.dados.LocalRepository
 import br.edu.up.a134508741.ui.ObjetoViewModel
 import br.edu.up.a134508741.dados.ObjetoDB.ObjetoDataB.Companion.abrirDB
 import br.edu.up.a134508741.dados.RemoteRepository
@@ -16,8 +15,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        val db = abrirDB(this)
-        val local = LocalRepository(db.objetoDao())
+
         val remoto = RemoteRepository()
         val viewModel = ObjetoViewModel(remoto)
         setContent {

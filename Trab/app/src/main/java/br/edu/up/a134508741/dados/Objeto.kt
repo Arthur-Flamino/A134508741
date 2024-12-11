@@ -9,5 +9,7 @@ data class Objeto(
     var id: Int? = null,
     val nome: String,
     val tamanho: String
-)
+){
+    constructor(): this(null, "","")
+}
 

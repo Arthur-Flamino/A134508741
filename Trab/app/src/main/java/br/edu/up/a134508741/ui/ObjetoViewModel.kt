@@ -10,9 +10,8 @@ import kotlinx.coroutines.launch
 
 class ObjetoViewModel(private val repository: RemoteRepository) : ViewModel() {
 
-    private val remoteRepository = RemoteRepository()
 
-    // LiveData para listar objetos
+    // StateFlow para listar objetos
     private val _objetos = MutableStateFlow<List<Objeto>>(emptyList())
     val objetos: StateFlow<List<Objeto>> get() = _objetos
 
